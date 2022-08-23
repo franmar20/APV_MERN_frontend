@@ -8,12 +8,11 @@ const Paciente = ({paciente}) => {
 
     const formatearFecha = (fecha) => {
 
-        console.log(fecha)
         const nuevaFecha = new Date(fecha)
-        return new Intl.DateTimeFormat('es-MX', {dateStyle: 'long'}).format(nuevaFecha)
+        var utc = new Date(nuevaFecha.getTime() + nuevaFecha.getTimezoneOffset() * 60000);
+        return new Intl.DateTimeFormat('es-MX', {dateStyle: 'long'}).format(utc)
 
-    }
-    
+    }    
 
     return (
 
