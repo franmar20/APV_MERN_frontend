@@ -25,7 +25,6 @@ const Formulario = () => {
       setSintomas(paciente.sintomas)
       setId(paciente._id)
     }
-    console.log(paciente.fecha)
 
   }, [paciente])
 
